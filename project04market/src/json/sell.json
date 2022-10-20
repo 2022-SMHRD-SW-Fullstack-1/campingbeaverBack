@@ -1,0 +1,34 @@
+{
+    "list": [
+        {
+            "title": "텐트 팝니다",
+            "price": "300000",
+            "place": "광주 동구",
+            "photo": "https://static.coupangcdn.com/image/vendor_inventory/1922/1d36cc472e74daee8457de1b39eebf80ea83ec99da822ae96c1e4c20b711.jpeg"
+        },
+        {
+            "title": "이면지 무료 나눔 합니다",
+            "price": "0",
+            "place": "광주 서구",
+            "photo": "https://mblogthumb-phinf.pstatic.net/MjAxNzA3MTFfMzUg/MDAxNDk5NzM0MTkxMDU5.olx39pEDC6RcAlX82RQQj0U6nqu7c41AVjJxcwV2WeUg.aKkytCjGSLg43TftuiOAmsrl3FMa6139ooJkCpMF0Ewg.JPEG.tjdrhd700/%EC%9D%B4%EB%A9%B4%EC%A7%80%EC%88%98%EA%B1%B0%ED%95%A8_%281%29.jpg?type=w800"
+        },
+        {
+            "title": "리액트 책",
+            "price": "30000",
+            "place": "광주 남구",
+            "photo": "http://image.kyobobook.co.kr/images/book/xlarge/796/x9791160508796.jpg"
+        },
+        {
+            "title": "JS 인강 팔아요",
+            "price": "50000",
+            "place": "광주 광산구",
+            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/800px-Unofficial_JavaScript_logo_2.svg.png"
+        },
+        {
+            "title": "풍암동 월세 남은 기간 사실분",
+            "price": "400000",
+            "place": "광주 서구 풍암동",
+            "photo": "https://media.bunjang.co.kr/product/125152261_1_1590091066_w360.jpg"
+        }
+    ]
+}
