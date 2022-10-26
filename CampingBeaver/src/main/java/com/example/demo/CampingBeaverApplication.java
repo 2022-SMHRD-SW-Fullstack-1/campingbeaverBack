@@ -9,5 +9,5 @@ public class CampingBeaverApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(CampingBeaverApplication.class, args);
 	}
-
+	
 }
