@@ -35,8 +35,20 @@ public class reservation_info {
     private String reserv_pay;
 
     // 예약시작일자 
-    private Timestamp reserv_s_date;
+//    private Timestamp reserv_s_date;
+    private String reserv_s_date;
 
     // 예약종료일자 
-    private Timestamp reserv_e_date;
+//    private Timestamp reserv_e_date;
+    private String reserv_e_date;
+    
+    //예약
+    public reservation_info(int reserv_seq, String user_id, String reserv_s_date, String reserv_e_date) {
+    	super();
+    	this.reserv_seq= reserv_seq;
+    	this.user_id = user_id;
+    	this.reserv_s_date = reserv_s_date;
+    	this.reserv_e_date = reserv_e_date;
+    }
+    
 }
