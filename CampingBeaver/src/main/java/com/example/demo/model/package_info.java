@@ -30,4 +30,6 @@ public class package_info {
     	this.pkg_price = pkg_price;
     	this.pkg_photo = pkg_photo;
     }
+
+
 }
