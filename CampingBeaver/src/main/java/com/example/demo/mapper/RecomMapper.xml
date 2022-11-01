@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.RecomMapper">
+	<select id="selectOneRecom" resultType="com.example.demo.model.campsite_info">
+		select * from campsite_info where site_seq=2
+	</select>
+	<select id="searchHashTag" resultType="com.example.demo.model.campsite_info">
+		select * from campsite_info where site_hash like
+		<foreach collection="hashList" item="hash">
+			'%'||#{hash}||'%'
+		</foreach>
+	</select>
+</mapper>
