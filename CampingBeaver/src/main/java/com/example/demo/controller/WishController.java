@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.demo.model.package_info;
 import com.example.demo.model.wishlist_info;
 import com.example.demo.service.WishService;
 
@@ -24,8 +25,8 @@ public class WishController {
 //	}
 	
 	@GetMapping("/wishlist/{user_id}")
-	public List<wishlist_info> wishList(@PathVariable("user_id") String user_id, Model model) {
-		List<wishlist_info> wishItemList = wishService.wishList(user_id);	
+	public List<package_info> wishList(@PathVariable("user_id") String user_id, Model model) {
+		List<package_info> wishItemList = wishService.wishList(user_id);	
 		return wishItemList;
 	}
 	

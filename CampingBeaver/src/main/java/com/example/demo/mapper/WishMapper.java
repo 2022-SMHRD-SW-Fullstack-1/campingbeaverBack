@@ -4,9 +4,9 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
 
-import com.example.demo.model.wishlist_info;
+import com.example.demo.model.package_info;
 
 @Mapper
 public interface WishMapper {
-	public List<wishlist_info> wishList(String user_id);
+	public List<package_info> wishList(String user_id);
 }
