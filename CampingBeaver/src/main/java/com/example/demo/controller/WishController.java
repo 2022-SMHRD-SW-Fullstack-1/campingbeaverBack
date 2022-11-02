@@ -30,11 +30,5 @@ public class WishController {
 		return wishItemList;
 	}
 	
-	//@PostMapping("/wishlist/admin")
-//	public List<wishlist_info> wishList(){
-//		@RequestBody String user_id, Model model){
-//		model.addAttribute("wishList", wishService.wishList(user_id));
-//		
-//		return wishService.wishList();
 
 }

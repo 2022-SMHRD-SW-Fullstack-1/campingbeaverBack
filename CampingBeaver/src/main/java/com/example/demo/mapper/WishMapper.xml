@@ -2,11 +2,12 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.demo.mapper.WishMapper">
 	<select id="wishList"
-			parameterType="com.example.demo.model.wishlist_info" resultType="com.example.demo.model.package_info">
-		select pkg.pkg_name, pkg.pkg_price, pkg.pkg_photo
+			parameterType="com.example.demo.model.wishlist_info" 
+			resultType="com.example.demo.model.package_info">
+		select w.pkg_seq, pkg.pkg_name, pkg.pkg_price, pkg.pkg_photo 
 		from package_info pkg 
 		join wishlist_info w
 		where w.user_id = #{user_id}
-		and pkg.pkg_seq = w.pkg_seq;
+		and pkg.pkg_seq = w.pkg_seq
 	</select>
 </mapper>

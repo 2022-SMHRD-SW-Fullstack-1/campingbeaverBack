@@ -25,11 +25,6 @@ public class package_info {
     // 패키지 사진
     private String pkg_photo;
     
-    public package_info(String pkg_name, int pkg_price, String pkg_photo) {
-    	this.pkg_name = pkg_name;
-    	this.pkg_price = pkg_price;
-    	this.pkg_photo = pkg_photo;
-    }
 
 
 }
