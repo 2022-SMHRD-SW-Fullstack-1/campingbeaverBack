@@ -52,7 +52,7 @@ public class HelloController {
 //	public void reservation(@RequestParam Integer reserv_seq, @RequestParam String user_id, @RequestParam Integer pkg_seq, @RequestParam String reserv_name, @RequestParam String reserv_addr, @RequestParam String reserv_post, @RequestParam String reserv_phone, @RequestParam Integer reserv_price, @RequestParam String reserv_pay, @RequestParam String reserv_s_date, @RequestParam String reserv_e_date ) {
 //        System.out.println(reserv_seq);
 //        System.out.println(user_id);
-//        System.out.println(pkg_seq);
+//        System.out.println(pkg_seq); 
 //        System.out.println(reserv_name);
 //        System.out.println(reserv_addr);
 //        System.out.println(reserv_post);
