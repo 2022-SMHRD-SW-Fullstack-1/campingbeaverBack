@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.ReservMapper">
+	<select id = "reservList" 
+			parameterType="com.example.demo.model.reservation_info"
+			resultType="com.example.demo.model.reservation_info">
+			select concat(date_format(res.reserv_date, '%Y%m%d'), res.reserv_seq) reserv_num, 
+			date_format(res.reserv_date, '%Y%m%d') reserv_date,
+        	pkg.pkg_name,
+        	res.reserv_price
+			from reservation_info res join package_info pkg
+			where res.user_id = #{user_id}
+			and res.pkg_seq = pkg.pkg_seq
+	</select>
+
+</mapper>
