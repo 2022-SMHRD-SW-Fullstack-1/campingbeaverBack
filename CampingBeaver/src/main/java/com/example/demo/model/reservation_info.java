@@ -17,7 +17,7 @@ public class reservation_info {
     private String user_id;
 
     // 패키지 순번 
-    private int pkg_seq;
+    private long pkg_seq;
 
     // 예약자 이름 
     private String reserv_name;
@@ -58,11 +58,12 @@ public class reservation_info {
     }
     
     // 예약목록 
-    public reservation_info(String reserv_num, String reserv_date, String reserv_name, int reserv_price) {
+    public reservation_info(String reserv_num, String reserv_date, String reserv_name, int reserv_price, long pkg_seq) {
     	this.reserv_num = reserv_num;
     	this.reserv_date = reserv_date;
     	this.reserv_name = reserv_name;
     	this.reserv_price = reserv_price;
+    	this.pkg_seq = pkg_seq;
     }
     
 }

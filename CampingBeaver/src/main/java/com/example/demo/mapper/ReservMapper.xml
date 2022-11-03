@@ -7,7 +7,7 @@
 			select concat(date_format(res.reserv_date, '%Y%m%d'), res.reserv_seq) reserv_num, 
 			date_format(res.reserv_date, '%Y%m%d') reserv_date,
         	pkg.pkg_name,
-        	res.reserv_price
+        	res.reserv_price, pkg.pkg_seq
 			from reservation_info res join package_info pkg
 			where res.user_id = #{user_id}
 			and res.pkg_seq = pkg.pkg_seq
