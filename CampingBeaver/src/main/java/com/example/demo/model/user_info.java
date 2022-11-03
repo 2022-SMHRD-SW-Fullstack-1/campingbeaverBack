@@ -20,6 +20,8 @@ public class user_info {
 	private String user_type;
 	// 회원 가입일자
 	private Timestamp user_joindate;
+	// 회원 이메일
+	private String user_email;
 	
-
 }
+
