@@ -2,8 +2,12 @@ package com.example.demo.model;
 
 import java.sql.Timestamp;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@NoArgsConstructor
+@AllArgsConstructor
 @Data
 public class review_info {
 	// 리뷰 순번 
@@ -26,4 +30,19 @@ public class review_info {
 
     // 리뷰 작성자 
     private String user_id;
+    
+    // 예약 번호
+    private String reserv_num;
+    
+
+    // 리뷰
+    public review_info(String reserv_num,int pkg_seq, String rv_content, 
+    		int rv_rating, String rv_photo, String user_id) {
+    	this.reserv_num = reserv_num;
+    	this.rv_content = rv_content;
+    	this.rv_rating = rv_rating;
+    	this.rv_photo = rv_photo;
+    	this.user_id = user_id;
+    	this.pkg_seq = pkg_seq;  	
+    }
 }
