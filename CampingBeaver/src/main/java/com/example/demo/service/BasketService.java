@@ -16,9 +16,9 @@ public class BasketService {
 	@Autowired
 	BasketMapper basketMapper;
 	
-//	public void basketListAdd() {
-//		basketMapper.basketListAdd();
-//	}
+	public void basketListAdd() {
+		basketMapper.basketListAdd();
+	}
 	
 	public List<basket_info> basketList(String user_id) {
 		return basketMapper.basketList(user_id);

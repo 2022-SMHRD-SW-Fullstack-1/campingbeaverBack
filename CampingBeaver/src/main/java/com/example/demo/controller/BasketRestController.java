@@ -24,12 +24,12 @@ public class BasketRestController {
 	@Autowired
 	BasketService basketService;
 	
-//	@PostMapping("listadd")
-//	public void basketAdd(@RequestBody Map<String, Object> map) {
-//		basketService.basketListAdd();
-//		String jsonStr=gson.toJson(map);
-//		System.out.println(jsonStr);
-//	}
+	@PostMapping("/basketadd")
+	public void basketListAdd(@RequestBody Map<String, Object> map) {
+		basketService.basketListAdd();
+		String jsonStr=gson.toJson(map);
+		System.out.println(jsonStr);
+	}
 //	@GetMapping("/add/{user_id}")
 //	public void basketListAdd(@PathVariable("user_id") String user_id, int pkg_seq) {
 //		

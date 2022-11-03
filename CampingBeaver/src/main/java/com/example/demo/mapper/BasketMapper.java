@@ -10,7 +10,7 @@ import com.example.demo.model.package_info;
 
 @Mapper
 public interface BasketMapper {
-//	public void basketListAdd();
+	public void basketListAdd();
 	
 	public List<basket_info> basketList(String user_id);
 	
