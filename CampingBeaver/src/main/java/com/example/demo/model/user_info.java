@@ -23,5 +23,11 @@ public class user_info {
 	// 회원 이메일
 	private String user_email;
 	
+
+	public user_info(String user_email, String user_id, String user_name) {
+		this.user_email = user_email;
+		this.user_id = user_id;
+		this.user_name = user_name;
+	}
 }
 
