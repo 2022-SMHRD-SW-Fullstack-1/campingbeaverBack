@@ -15,4 +15,8 @@ public class UserinfoService {
 	public int sign(user_info userinfo) {
 		return userinfoMapper.sign(userinfo);
 	}
+	
+	public user_info login(user_info userinfo) {
+		return userinfoMapper.login(userinfo);
+	}
 }

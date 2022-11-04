@@ -1,9 +1,14 @@
 package com.example.demo.model;
 
 import java.sql.Timestamp;
+import java.time.LocalDateTime;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@NoArgsConstructor
+@AllArgsConstructor
 @Data
 public class user_info {
 	// 회원 아이디 
@@ -19,7 +24,7 @@ public class user_info {
 	// 회원 가입유형 
 	private String user_type;
 	// 회원 가입일자
-	private Timestamp user_joindate;
+	private String user_joindate;
 	// 회원 이메일
 	private String user_email;
 	

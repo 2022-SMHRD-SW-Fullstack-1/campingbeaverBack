@@ -36,7 +36,7 @@ public class HelloController {
 	@PostMapping("main")
 	public void reservation(@RequestBody Map<String, Object> map) {
     	String jsonStr=gson.toJson(map);
-		System.out.println(jsonStr);
+	//	System.out.println(jsonStr);
 	}
 	
 //	@GetMapping("/main")

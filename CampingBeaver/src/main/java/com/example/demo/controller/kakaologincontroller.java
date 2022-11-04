@@ -74,6 +74,7 @@ public class kakaologincontroller {
 		System.out.println(userinfo);
 		System.out.println(userinfo.getUser_id());
 		
+		
 		System.out.println(reserv);
 		
 		return userinfoService.sign(userinfo);
@@ -81,5 +82,17 @@ public class kakaologincontroller {
 	}
 	
 
+	@PostMapping("/login")
+	public user_info login(@RequestBody String reserv) {
+      
+		Gson gson = new Gson();
+		user_info userinfo = gson.fromJson(reserv, user_info.class);
+		
+		System.out.println(userinfo.getUser_pw());
+		
+		//userinfoService.login(userinfo) /자바객체를 -> json sTRING 로 바꿔줘야함
+		
+		return userinfoService.login(userinfo);
+    }
 	
 }

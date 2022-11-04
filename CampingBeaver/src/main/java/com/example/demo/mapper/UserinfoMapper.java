@@ -8,6 +8,8 @@ import com.example.demo.model.user_info;
 public interface UserinfoMapper {
 
 	public int sign(user_info userinfo);
+	
+	public user_info login(user_info userinfo);
 
 	
 }
