@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.ReservMapper">
+	<insert id="reserv" >
+		insert into reservation_info values(null, now(), #{user_id}, #{pkg_seq}, #{reserv_name}, #{reserv_addr}, #{reserv_post}, #{reserv_phone}, #{reserv_price}, #{reserv_pay}, #{reserv_s_date}, #{reserv_e_date})
+	</insert>
+</mapper>

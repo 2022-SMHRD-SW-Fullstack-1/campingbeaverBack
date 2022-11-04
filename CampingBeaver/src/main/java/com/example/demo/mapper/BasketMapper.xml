@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.demo.mapper.BasketMapper">
-	<insert id="basketListAdd" parameterType="com.example.demo.model.wishlist_info"> 
-		insert into basket_info values(null,#{user_id},#{pkg_seq},now())
+	<insert id="cartAdd"> 
+		insert into basket_info values(null, #{user_id}, #{pkg_seq}, now())
 	</insert>
+	
+	<delete id="cartDelete">
+		delete from basket_info where basket_seq=#{basket_seq}
+	</delete>
 
 	<insert id="basketList">
 		insert into basket_info values(null,
@@ -11,8 +15,7 @@
 	</insert>
 
 	<select id="selectBasketList"
-		parameterType="com.example.demo.model.basket_info"
-		resultType="com.example.demo.model.basket_info">
+		resultType="com.example.demo.model.basketlist">
 		select *
 		from package_info pkg 
 		join basket_info b
