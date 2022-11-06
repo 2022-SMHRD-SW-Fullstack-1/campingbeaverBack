@@ -5,14 +5,14 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.demo.mapper.ReservMapper;
+import com.example.demo.mapper.ReservationinfoMapper;
 
 @Service
-public class ReservService {
+public class ReservationinfoService {
 	@Autowired
-	ReservMapper reservMapper;
+	ReservationinfoMapper reservationinfoMapper;
 
 	public void reserv(Map<String, Object> map) {
-		reservMapper.reserv(map);
+		reservationinfoMapper.reserv(map);
 	}
 }

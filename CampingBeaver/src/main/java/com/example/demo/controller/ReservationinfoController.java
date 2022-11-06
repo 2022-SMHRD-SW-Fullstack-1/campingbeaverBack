@@ -7,20 +7,20 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.service.ReservService;
+import com.example.demo.service.ReservationinfoService;
 import com.google.gson.Gson;
 
 @RestController
-public class ReservController {
+public class ReservationinfoController {
 	Gson gson=new Gson();
 	@Autowired
-	ReservService reservService;
+	ReservationinfoService reservationinfoService;
 
 	@PostMapping("/reserv")
 	public void reserv(@RequestBody Map<String, Object> map) {
 		String jsonStr=gson.toJson(map);
 		System.out.println(jsonStr);
-		reservService.reserv(map);
+		reservationinfoService.reserv(map);
 	}
 
 }
