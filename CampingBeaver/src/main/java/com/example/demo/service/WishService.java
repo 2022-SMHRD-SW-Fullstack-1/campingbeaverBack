@@ -25,4 +25,9 @@ public class WishService {
 	public int deleteWish(wishlist_info deleteItem) {
 		return wishMapper.deleteWish(deleteItem);
 	}
+	
+	// 관심상품 추가하기
+	public int addWish(wishlist_info addItem) {
+		return wishMapper.addWish(addItem);
+	}
 }

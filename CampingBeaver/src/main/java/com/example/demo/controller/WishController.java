@@ -42,5 +42,16 @@ public class WishController {
 		wishService.deleteWish(deleteItem);
 	}
 	
+	// 관심상품 추가하기
+	@PostMapping("/wishlist/add")
+	public void addWish(@RequestBody Map<String, Object> add) {
+//		System.out.println(add);
+		
+		ObjectMapper mapper = new ObjectMapper();
+		wishlist_info addItem = mapper.convertValue(add, wishlist_info.class);
+		System.out.println(addItem.toString());
+		wishService.addWish(addItem);
+	}
+	
 
 }

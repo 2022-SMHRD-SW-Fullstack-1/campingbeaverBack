@@ -20,4 +20,12 @@
 		where user_id = #{user_id}
 		and pkg_seq = #{pkg_seq}
 	</delete>
+	
+	<!-- 관심상품 추가하기 -->
+	<insert id="addWish"
+			parameterType="com.example.demo.model.wishlist_info">
+		insert into wishlist_info values(
+			null, #{pkg_seq}, #{user_id}, now()
+		)
+	</insert>
 </mapper>

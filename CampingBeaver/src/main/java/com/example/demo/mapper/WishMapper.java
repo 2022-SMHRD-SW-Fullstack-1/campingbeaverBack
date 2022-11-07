@@ -17,4 +17,7 @@ public interface WishMapper {
 	// 관심상품 삭제하기
 	public int deleteWish(wishlist_info reviewItem);
 	
+	// 관심상품 추가하기
+	public int addWish(wishlist_info addItem);
+	
 }
