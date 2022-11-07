@@ -2,6 +2,8 @@ package com.example.demo.controller;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,8 +15,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+
 import com.example.demo.model.campsite_info;
 import com.example.demo.service.RecomService;
+
+import com.example.demo.model.reservation_info;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.google.gson.Gson;
+
 
 //@Controller
 //public class HelloController {
@@ -23,7 +31,6 @@ import com.example.demo.service.RecomService;
 //	public void reservation(@RequestBody String reserv) {
 //		System.out.println(reserv);
 //	}
-	
 //	@PostMapping("/main")
 //	public void reservation(@RequestBody HashMap<String, Object> map) {
 //		System.out.println(map);
@@ -31,10 +38,18 @@ import com.example.demo.service.RecomService;
 //}
 
 @RestController
+@RequestMapping("/")
 public class HelloController {
-	
-	@Autowired
-	RecomService recomService;
+
+
+
+	  Gson gson=new Gson();
+	@PostMapping("main")
+	public void reservation(@RequestBody Map<String, Object> map) {
+    	String jsonStr=gson.toJson(map);
+		System.out.println(jsonStr);
+	}
+
 	
 //	@GetMapping("/main")
 //	public String root() {
@@ -59,22 +74,10 @@ public class HelloController {
 //        System.out.println(reserv_s_date);
 //        System.out.println(reserv_e_date);
 //	}
+
 	
-	@GetMapping("/main")
-	public campsite_info campsite_info() {
-//		recomService.selectOneRecom(site_seq);
-//		campsite_info campsite_info = new campsite_info(site_seq);
-		return 	recomService.selectOneRecom();
-	}
+
 	
-	@PostMapping("/hash")
-	public List<Object> hashTag(@RequestBody List<Object> hashList) {
-		System.out.println(hashList);
-		return hashList;
-	}
-	
-	@GetMapping("/hash")
-	public List<campsite_info> searchHashList() {
-		return recomService.searchHashTag();
-	}
+
 }
+

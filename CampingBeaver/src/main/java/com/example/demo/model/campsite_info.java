@@ -52,4 +52,6 @@ public class campsite_info {
     	this.site_seq = site_seq;
     }
     
+
+    
 }

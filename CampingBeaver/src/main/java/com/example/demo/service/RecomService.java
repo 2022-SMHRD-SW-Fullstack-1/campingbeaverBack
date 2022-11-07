@@ -16,11 +16,12 @@ public class RecomService {
 	RecomMapper recomMapper;
 	
 	
-	public campsite_info selectOneRecom() {
-		return recomMapper.selectOneRecom();
+	public campsite_info selectOneRecom(int site_seq) {
+		return recomMapper.selectOneRecom(site_seq);
 	}
 	
 	public List<campsite_info> searchHashTag(){
+//		System.out.println(hashList.size());
 		return recomMapper.searchHashTag();
 	}
 }
