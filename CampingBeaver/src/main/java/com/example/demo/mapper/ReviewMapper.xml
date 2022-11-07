@@ -6,7 +6,8 @@
 			>
 		insert into review_info values (
 		null, #{pkg_seq}, #{rv_content},
-		#{rv_photo}, now(), #{rv_rating}, #{user_id}
+		substring_index(#{rv_photo}, '\\',-1), 
+		now(), #{rv_rating}, #{user_id}
 		)
 	</insert>
 </mapper>
