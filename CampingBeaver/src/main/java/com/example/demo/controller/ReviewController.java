@@ -18,6 +18,7 @@ public class ReviewController {
 	@Autowired
 	ReviewService reviewService;
 	
+	// 리뷰 작성하기
 	@PostMapping("/write/{resnum}")
 	public void writeReview(
 			@PathVariable("resnum") String resnum, 
@@ -33,4 +34,7 @@ public class ReviewController {
 		reviewService.writeReview(reviewItem);
 		
 	}
+	
+//	@GetMapping("/wishlist/{user_id}")
+//	public void reviewList(@)
 }

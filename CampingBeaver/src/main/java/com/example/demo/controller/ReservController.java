@@ -20,7 +20,7 @@ public class ReservController {
 	ReservService reservService;
 	
 	@GetMapping("/reservlist/{user_id}")
-	public List<reservation_info> reservList(@PathVariable("user_id") String user_id, Model model) {
+	public List<reservation_info> reservList(@PathVariable("user_id") String user_id) {
 		List<reservation_info> reservList = reservService.reservList(user_id);
 		return reservList;
 	}
