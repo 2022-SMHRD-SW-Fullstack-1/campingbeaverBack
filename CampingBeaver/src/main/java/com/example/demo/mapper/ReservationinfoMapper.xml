@@ -4,4 +4,8 @@
 	<insert id="reserv" >
 		insert into reservation_info values(null, now(), #{user_id}, #{pkg_seq}, #{reserv_name}, #{reserv_addr}, #{reserv_post}, #{reserv_phone}, #{reserv_price}, #{reserv_pay}, #{reserv_s_date}, #{reserv_e_date})
 	</insert>
+	
+	<select id="selectOrderCom" resultType="com.example.demo.model.reservationlist">
+		select * from reservation_info order by reserv_seq DESC limit 1
+	</select>
 </mapper>
