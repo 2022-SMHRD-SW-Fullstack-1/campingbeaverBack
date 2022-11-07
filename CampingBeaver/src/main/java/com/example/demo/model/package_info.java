@@ -21,7 +21,10 @@ public class package_info {
 
     // 패키지 해시태그 
     private String pkg_hash;
-    
-    // 패키지 포토 
+
+    // 패키지 사진
     private String pkg_photo;
+    
+
+
 }
