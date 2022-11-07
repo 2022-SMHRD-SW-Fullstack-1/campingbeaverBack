@@ -7,13 +7,22 @@ import org.springframework.stereotype.Service;
 
 import com.example.demo.mapper.WishMapper;
 import com.example.demo.model.package_info;
+import com.example.demo.model.wishlist_info;
+
 
 @Service
 public class WishService {
 	@Autowired
 	WishMapper wishMapper;
 	
+	// 관심상품 불러오기
 	public List<package_info> wishList(String user_id) {
 		return wishMapper.wishList(user_id);
+	}
+	
+	
+	// 관심상품 삭제하기
+	public int deleteWish(wishlist_info deleteItem) {
+		return wishMapper.deleteWish(deleteItem);
 	}
 }

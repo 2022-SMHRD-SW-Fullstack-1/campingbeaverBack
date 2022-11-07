@@ -2,8 +2,12 @@ package com.example.demo.model;
 
 import java.sql.Timestamp;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@NoArgsConstructor
+@AllArgsConstructor
 @Data
 public class wishlist_info {
 
@@ -18,5 +22,10 @@ public class wishlist_info {
 
     // 등록 일자 
     private Timestamp reg_date;
+    
+    public wishlist_info(int pkg_seq, String user_id) {
+    	this.pkg_seq = pkg_seq;
+    	this.user_id = user_id;
+    }
 	
 }
