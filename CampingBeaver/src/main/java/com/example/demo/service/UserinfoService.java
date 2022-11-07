@@ -19,4 +19,8 @@ public class UserinfoService {
 	public user_info login(user_info userinfo) {
 		return userinfoMapper.login(userinfo);
 	}
+	
+	public int update(user_info userinfo) {
+		return userinfoMapper.update(userinfo);
+	}
 }

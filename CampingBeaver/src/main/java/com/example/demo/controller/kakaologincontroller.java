@@ -90,9 +90,19 @@ public class kakaologincontroller {
 		
 		System.out.println(userinfo.getUser_pw());
 		
-		//userinfoService.login(userinfo) /자바객체를 -> json sTRING 로 바꿔줘야함
+		//userinfoService.login(userinfo) /자바객체를 -> json String 로 바꿔줘야함 
+		//근데 굳이 안바꿔줘도 json형태로 보내니까 브라우저에서 알아서 알아먹음
 		
 		return userinfoService.login(userinfo);
     }
 	
+	@PostMapping("/update")
+	public int update(@RequestBody String reserv) {
+		
+		Gson gson = new Gson();
+		user_info userinfo = gson.fromJson(reserv, user_info.class);
+		System.out.println(userinfo);
+		
+		return userinfoService.update(userinfo);
+	}
 }
