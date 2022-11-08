@@ -12,5 +12,9 @@
 			where res.user_id = #{user_id}
 			and res.pkg_seq = pkg.pkg_seq
 	</select>
+	
+	<delete id = "reservDelete">
+		delete from reservation_info where reserv_seq=#{reserv_seq}
+	</delete>
 
 </mapper>

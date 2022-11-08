@@ -7,6 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.model.reservation_info;
@@ -24,6 +25,11 @@ public class ReservController {
 		List<reservation_info> reservList = reservService.reservList(user_id);
 		return reservList;
 	}
-		
+	
+	@GetMapping("/reserv/delete")
+	public void reservDelete(@RequestParam int reserv_seq) {
+		System.out.println(reserv_seq);
+		reservService.reservDelete(reserv_seq);
+	}
 	
 }
