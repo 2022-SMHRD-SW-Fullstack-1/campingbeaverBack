@@ -20,7 +20,7 @@ public class ReviewController {
 	ReviewService reviewService;
 	
 	// 리뷰 작성하기
-	@PostMapping("/write/{resnum}")
+	@PostMapping("/rvwrite/{resnum}")
 	public void writeReview(
 			@PathVariable("resnum") String resnum, 
 			@RequestBody Map<String, Object> review) {
@@ -37,10 +37,19 @@ public class ReviewController {
 	}
 	
 	// 리뷰 불러오기
-	
 	@GetMapping("/reviewlist/{user_id}")
 	public List<review_info> reviewList(@PathVariable("user_id") String user_id) {
 		List<review_info> reviewItemList = reviewService.selectAllReview(user_id);
 		return reviewItemList;
 	}
+	
+	// 리뷰 삭제하기
+	@PostMapping("/reviewlist/delete")
+	public void deleteReview(@RequestBody Map<String, Object> delete) {
+		
+		ObjectMapper mapper = new ObjectMapper();
+		review_info deleteItem = mapper.convertValue(delete, review_info.class);
+		reviewService.deleteReview(deleteItem);
+	}
+	
 }

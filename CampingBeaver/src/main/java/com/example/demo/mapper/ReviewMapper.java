@@ -14,4 +14,7 @@ public interface ReviewMapper {
 	
 	// 리뷰 불러오기
 	public List<review_info> selectAllReview(String user_id);
+	
+	// 리뷰 삭제하기
+	public int deleteReview(review_info reviewItem);
 }
