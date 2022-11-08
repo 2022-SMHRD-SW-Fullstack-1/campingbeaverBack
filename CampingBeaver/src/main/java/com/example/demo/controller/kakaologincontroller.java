@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.kakao.KakaoUserInfo;
+//import com.example.demo.kakao.KakaoUserInfo;
 import com.example.demo.model.user_info;
 import com.example.demo.service.PackageinfoService;
 import com.example.demo.service.UserinfoService;
@@ -51,15 +51,15 @@ public class kakaologincontroller {
 		
 	}
 	
-	@GetMapping("/test")
-	public void test() {
-		try {
-			KakaoUserInfo.kakaouserinfo();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
+//	@GetMapping("/test")
+//	public void test() {
+//		try {
+//			KakaoUserInfo.kakaouserinfo();
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//	}
 	
 	@Autowired
 	UserinfoService userinfoService;
