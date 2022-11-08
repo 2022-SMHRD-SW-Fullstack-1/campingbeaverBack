@@ -1,8 +1,10 @@
 package com.example.demo.controller;
 
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -11,7 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.demo.model.review_info;
 import com.example.demo.service.ReviewService;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.gson.Gson;
 
 @RestController
 public class ReviewController {
@@ -35,6 +36,11 @@ public class ReviewController {
 		
 	}
 	
-//	@GetMapping("/wishlist/{user_id}")
-//	public void reviewList(@)
+	// 리뷰 불러오기
+	
+	@GetMapping("/reviewlist/{user_id}")
+	public List<review_info> reviewList(@PathVariable("user_id") String user_id) {
+		List<review_info> reviewItemList = reviewService.selectAllReview(user_id);
+		return reviewItemList;
+	}
 }

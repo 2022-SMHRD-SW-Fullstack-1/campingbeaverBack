@@ -23,7 +23,8 @@ public class review_info {
     private String rv_photo;
 
     // 리뷰 작성일자 
-    private Timestamp rv_date;
+    private String rv_date;
+//    private Timestamp rv_date;
 
     // 리뷰 별점 
     private int rv_rating;
