@@ -23,7 +23,8 @@ public class review_info {
     private String rv_photo;
 
     // 리뷰 작성일자 
-    private Timestamp rv_date;
+    private String rv_date;
+//    private Timestamp rv_date;
 
     // 리뷰 별점 
     private int rv_rating;
@@ -37,12 +38,13 @@ public class review_info {
 
     // 리뷰
     public review_info(String reserv_num,int pkg_seq, String rv_content, 
-    		int rv_rating, String rv_photo, String user_id) {
+    		int rv_rating, String rv_photo, String user_id, int rv_seq) {
     	this.reserv_num = reserv_num;
     	this.rv_content = rv_content;
     	this.rv_rating = rv_rating;
     	this.rv_photo = rv_photo;
     	this.user_id = user_id;
-    	this.pkg_seq = pkg_seq;  	
+    	this.pkg_seq = pkg_seq;  
+    	this.rv_seq = rv_seq;
     }
 }
