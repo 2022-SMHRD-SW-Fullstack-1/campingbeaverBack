@@ -6,8 +6,24 @@
 			>
 		insert into review_info values (
 		null, #{pkg_seq}, #{rv_content},
-		substring_index(#{rv_photo}, '\\',-1), 
+		concat('/',substring_index(#{rv_photo}, '\\',-1)), 
 		now(), #{rv_rating}, #{user_id}
 		)
 	</insert>
+	
+	<select id="selectAllReview"
+			parameterType="com.example.demo.model.review_info"
+			resultType="com.example.demo.model.review_info">
+		select rv_seq, pkg_seq, rv_content, rv_photo, 
+		date_format(rv_date, '%Y%m%d') rv_date, rv_rating, user_id
+		from review_info where user_id = #{user_id}
+		order by rv_seq desc
+	</select>
+	
+	<delete id="deleteReview"
+			parameterType="com.example.demo.model.review_info">
+		delete from review_info
+		where user_id = #{user_id}
+		and rv_seq = #{rv_seq}	
+	</delete>
 </mapper>
