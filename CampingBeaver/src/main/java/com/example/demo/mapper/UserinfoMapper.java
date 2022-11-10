@@ -12,4 +12,6 @@ public interface UserinfoMapper {
 	public user_info login(user_info userinfo);
 
 	public int update(user_info userinfo);
+	
+	public user_info userdelete(user_info user_id);
 }

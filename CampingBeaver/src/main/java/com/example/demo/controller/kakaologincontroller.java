@@ -105,4 +105,14 @@ public class kakaologincontroller {
 		
 		return userinfoService.update(userinfo);
 	}
+	
+	@PostMapping("/userdelete")
+	public user_info userdelete(@RequestBody String reserv) {
+		
+		Gson gson = new Gson();
+		user_info user_id = gson.fromJson(reserv, user_info.class);
+		
+		System.out.println(user_id);
+		return userinfoService.userdelete(user_id);
+	}
 }
