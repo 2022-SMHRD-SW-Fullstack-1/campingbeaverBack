@@ -10,5 +10,7 @@ import com.example.demo.model.package_info;
 public interface PackageinfoMapper {
 	
 	public List<package_info> selectPkgList();
+	
+	public List<package_info> storeDetail(int storeDetail);
 
 }

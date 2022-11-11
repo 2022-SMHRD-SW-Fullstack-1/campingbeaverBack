@@ -26,27 +26,31 @@ public class BasketRestController {
 	@Autowired
 	BasketService basketService;
 	
+	//장바구니 추가
 	@PostMapping("/cartadd")
 	public void cartAdd(@RequestBody Map<String, Object> map) {
+//		System.out.println(map);
+		
 		String jsonStr=gson.toJson(map);
 		System.out.println(jsonStr);
 		basketService.cartAdd(map);
 	}
 	
+	//장바구니 삭제
 	@GetMapping("/cartdelete")
 	public void cartDelete(@RequestParam int basket_seq) {
-		System.out.println(basket_seq);
+//		System.out.println(basket_seq);
+		
 		basketService.cartDelete(basket_seq);
 	}
 	
-	@PostMapping("/listpage/{user_id}")
-	public List<basket_info> basketList(@PathVariable("user_id") String user_id, Model model) {
-		List<basket_info> basketItemList = basketService.basketList(user_id);	
-		return basketItemList;
-	}
-	@GetMapping("/basketlist")
-	public List<basketlist> selectBasketList(){
-		return basketService.selectBasketList();
+	//장바구니 출력
+	@GetMapping("/basketlist{user_id}")
+	public List<basketlist> selectBasketList(@PathVariable("user_id") String user_id, Model model){
+//		System.out.println(user_id);
+		
+		List<basketlist> basketSelList = basketService.selectBasketList(user_id);
+		return basketSelList;
 	}
 	
 }
