@@ -32,5 +32,6 @@
 			resultType="com.example.demo.model.review_info">
 		select * from review_info
 		where pkg_seq = #{pkg_seq}
+		order by rv_seq desc
 	</select>
 </mapper>
