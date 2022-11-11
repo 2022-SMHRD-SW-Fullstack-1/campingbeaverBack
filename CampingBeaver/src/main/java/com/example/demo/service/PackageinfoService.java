@@ -17,5 +17,9 @@ public class PackageinfoService {
 	public List<package_info> selectPkgList(){
 		return packageinfoMapper.selectPkgList();
 	}
+	
+	public List<package_info> storeDetail(int detailNum){
+		return packageinfoMapper.storeDetail(detailNum);
+	}
 
 }

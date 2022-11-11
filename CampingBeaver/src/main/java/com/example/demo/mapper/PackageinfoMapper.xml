@@ -4,4 +4,8 @@
 	<select id="selectPkgList" parameterType="com.example.demo.model.package_info" resultType="com.example.demo.model.package_info">
 		select * from package_info
 	</select>
+	
+	<select id="storeDetail" resultType="com.example.demo.model.package_info">
+		select * from package_info where pkg_seq=#{DetailNum}
+	</select>
 </mapper>

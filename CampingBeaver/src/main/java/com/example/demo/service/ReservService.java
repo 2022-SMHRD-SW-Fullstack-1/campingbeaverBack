@@ -16,4 +16,8 @@ public class ReservService {
 	public List<reservation_info> reservList(String user_id){
 		return reservMapper.reservList(user_id);
 	}
+	
+	public void reservDelete(int reserv_seq) {
+		reservMapper.reservDelete(reserv_seq);
+	}
 }
