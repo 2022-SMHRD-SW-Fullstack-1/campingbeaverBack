@@ -29,4 +29,9 @@ public class ReviewService {
 		return reviewMapper.deleteReview(deleteItem);
 	}
 	
+	// 해당 상품 리뷰 불러오기
+	public List<review_info> selectReview(int pkg_seq){
+		return reviewMapper.selectReview(pkg_seq);
+	}
+	
 }
