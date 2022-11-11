@@ -26,4 +26,11 @@
 		where user_id = #{user_id}
 		and rv_seq = #{rv_seq}	
 	</delete>
+	
+	<select id="selectReview"
+			parameterType="com.example.demo.model.review_info"
+			resultType="com.example.demo.model.review_info">
+		select * from review_info
+		where pkg_seq = #{pkg_seq}
+	</select>
 </mapper>
