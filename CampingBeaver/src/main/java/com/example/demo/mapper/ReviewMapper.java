@@ -17,4 +17,7 @@ public interface ReviewMapper {
 	
 	// 리뷰 삭제하기
 	public int deleteReview(review_info reviewItem);
+	
+	// 해당 상품 리뷰 불러오기
+	public List<review_info> selectReview(int pkg_seq);
 }
