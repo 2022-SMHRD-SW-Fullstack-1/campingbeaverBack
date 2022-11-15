@@ -52,4 +52,12 @@ public class ReviewController {
 		reviewService.deleteReview(deleteItem);
 	}
 	
+	// 해당 상품 리뷰 불러오기
+	@GetMapping("/storedetail/review/{pkg_seq}")
+	public List<review_info> selectReview(@PathVariable("pkg_seq") String pkgSeq) {
+		int pkg_seq = Integer.parseInt(pkgSeq);
+		List<review_info> selectReviewItemList = reviewService.selectReview(pkg_seq);
+		return selectReviewItemList;
+	}
+	
 }

@@ -11,11 +11,12 @@ import com.example.demo.model.package_info;
 
 @Mapper
 public interface BasketMapper {
+	//장바구니 추가
 	public void cartAdd(Map<String, Object> map);
 	
+	//장바구니 삭제
 	public void cartDelete(int basket_seq);
 	
-	public List<basket_info> basketList(String user_id);
-	
-	public List<basketlist> selectBasketList();
+	//장바구니 출력
+	public List<basketlist> selectBasketList(String user_id);
 }

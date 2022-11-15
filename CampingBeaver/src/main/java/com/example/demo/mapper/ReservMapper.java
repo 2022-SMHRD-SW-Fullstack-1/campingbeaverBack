@@ -9,4 +9,6 @@ import com.example.demo.model.reservation_info;
 @Mapper
 public interface ReservMapper {
 	public List<reservation_info> reservList(String user_id);
+	
+	public void reservDelete(int reserv_seq);
 }
