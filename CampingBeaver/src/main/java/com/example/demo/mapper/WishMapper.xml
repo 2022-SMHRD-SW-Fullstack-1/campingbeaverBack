@@ -2,7 +2,6 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.demo.mapper.WishMapper">
 
-	<!-- 관심상품 불러오기 -->
 	<select id="wishList"
 			parameterType="com.example.demo.model.wishlist_info" 
 			resultType="com.example.demo.model.package_info">
@@ -13,7 +12,6 @@
 		and pkg.pkg_seq = w.pkg_seq
 	</select>
 	
-	<!-- 관심상품 삭제하기 -->
 	<delete id="deleteWish"
 			parameterType="com.example.demo.model.wishlist_info">
 		delete from wishlist_info
@@ -21,7 +19,6 @@
 		and pkg_seq = #{pkg_seq}
 	</delete>
 	
-	<!-- 관심상품 추가하기 -->
 	<insert id="addWish"
 			parameterType="com.example.demo.model.wishlist_info">
 		insert into wishlist_info values(

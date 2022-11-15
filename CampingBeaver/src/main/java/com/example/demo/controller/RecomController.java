@@ -28,8 +28,6 @@ public class RecomController {
 	public campsite_info campsite_info(@RequestParam int site_seq) {
 		return 	recomService.selectOneRecom(site_seq);
 	}
-
-
 	
 	@GetMapping("/hash")
 	public List<campsite_info> searchHashTag(){
