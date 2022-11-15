@@ -111,7 +111,7 @@ public class kakaologincontroller {
 		
 		Gson gson = new Gson();
 		user_info user_id = gson.fromJson(reserv, user_info.class);
-		
+		System.out.println(user_id);
 		System.out.println(user_id);
 		return userinfoService.userdelete(user_id);
 	}
