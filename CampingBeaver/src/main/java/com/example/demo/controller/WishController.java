@@ -23,33 +23,23 @@ public class WishController {
 	@Autowired
 	WishService wishService;
 	
-	// 관심상품 불러오기
 	@GetMapping("/wishlist/{user_id}")
 	public List<package_info> wishList(@PathVariable("user_id") String user_id, Model model) {
 		List<package_info> wishItemList = wishService.wishList(user_id);	
 		return wishItemList;
 	}
 	
-	// 관심상품 삭제하기
 	@PostMapping("/wishlist/delete")
 	public void deleteWish(@RequestBody Map<String, Object> delete) {
-//		System.out.println("삭제정보 : " + delete);
-		
 		ObjectMapper mapper = new ObjectMapper();
 		wishlist_info deleteItem = mapper.convertValue(delete, wishlist_info.class);
-		
-//		System.out.println(deleteItem.toString());
 		wishService.deleteWish(deleteItem);
 	}
 	
-	// 관심상품 추가하기
 	@PostMapping("/wishlist/add")
 	public void addWish(@RequestBody Map<String, Object> add) {
-//		System.out.println(add);
-		
 		ObjectMapper mapper = new ObjectMapper();
 		wishlist_info addItem = mapper.convertValue(add, wishlist_info.class);
-		System.out.println(addItem.toString());
 		wishService.addWish(addItem);
 	}
 	

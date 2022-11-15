@@ -11,7 +11,6 @@ import com.example.demo.model.campsite_info;
 @Service
 public class RecomService {
 
-	//외부에서 생성된 객체 주입
 	@Autowired
 	RecomMapper recomMapper;
 	

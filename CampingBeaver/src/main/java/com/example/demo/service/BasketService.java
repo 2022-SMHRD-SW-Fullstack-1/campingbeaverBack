@@ -17,18 +17,15 @@ public class BasketService {
 	@Autowired
 	BasketMapper basketMapper;
 	
-	//장바구니 추가
 	public void cartAdd(Map<String, Object> map) {
 		basketMapper.cartAdd(map);
 	}
 	
-	//장바구니 삭제
 	public void cartDelete(int basket_seq) {
 		System.out.println(basket_seq);
 		basketMapper.cartDelete(basket_seq);
 	}
 	
-	//장바구니 출력
 	public List<basketlist> selectBasketList(String user_id){
 		return basketMapper.selectBasketList(user_id);
 	}
