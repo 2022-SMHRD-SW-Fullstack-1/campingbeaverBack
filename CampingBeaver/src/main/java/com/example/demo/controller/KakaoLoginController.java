@@ -27,21 +27,12 @@ import org.json.simple.parser.JSONParser;
 
 
 
-//import com.example.demo.kakao.KakaoLoginService;
 
 @RestController
 @RequestMapping(value="/")
-public class kakaologincontroller {
+public class KakaoLoginController {
 	
-//	@Autowired
-//	KakaoLoginService kakakologinservice;
-	
-//	@GetMapping("/kakaologin")
-//	public String kakaologin(){
-//		System.out.println("안녕안녕");
-//		
-//		return "Spring Boot and React 연동 테스트\n";
-//	}
+
 	
 	//react에서 access_token 받아왔음
 	@PostMapping("/kakaologin")
@@ -51,15 +42,7 @@ public class kakaologincontroller {
 		
 	}
 	
-//	@GetMapping("/test")
-//	public void test() {
-//		try {
-//			KakaoUserInfo.kakaouserinfo();
-//		} catch (IOException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//	}
+
 	
 	@Autowired
 	UserinfoService userinfoService;
@@ -71,11 +54,7 @@ public class kakaologincontroller {
 		
 		user_info userinfo = gson.fromJson(reserv, user_info.class);
 		
-		System.out.println(userinfo);
-		System.out.println(userinfo.getUser_id());
-		
-		
-		System.out.println(reserv);
+
 		
 		return userinfoService.sign(userinfo);
 		
@@ -88,10 +67,8 @@ public class kakaologincontroller {
 		Gson gson = new Gson();
 		user_info userinfo = gson.fromJson(reserv, user_info.class);
 		
-		System.out.println(userinfo.getUser_pw());
 		
-		//userinfoService.login(userinfo) /자바객체를 -> json String 로 바꿔줘야함 
-		//근데 굳이 안바꿔줘도 json형태로 보내니까 브라우저에서 알아서 알아먹음
+		
 		
 		return userinfoService.login(userinfo);
     }
@@ -101,7 +78,7 @@ public class kakaologincontroller {
 		
 		Gson gson = new Gson();
 		user_info userinfo = gson.fromJson(reserv, user_info.class);
-		System.out.println(userinfo);
+		
 		
 		return userinfoService.update(userinfo);
 	}
@@ -111,8 +88,7 @@ public class kakaologincontroller {
 		
 		Gson gson = new Gson();
 		user_info user_id = gson.fromJson(reserv, user_info.class);
-		System.out.println(user_id);
-		System.out.println(user_id);
+		
 		return userinfoService.userdelete(user_id);
 	}
 }
