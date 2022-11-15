@@ -26,20 +26,8 @@ public class RecomController {
 	Gson gson=new Gson();
 	@GetMapping("/recomdetail")
 	public campsite_info campsite_info(@RequestParam int site_seq) {
-		System.out.println(site_seq);
-//		recomService.selectOneRecom(site_seq);
-//		campsite_info campsite_info = new campsite_info(site_seq);
-		
 		return 	recomService.selectOneRecom(site_seq);
 	}
-	
-
-//	@PostMapping("/hash")
-//	public void getHashTag(@RequestBody List<Object> hashList) {
-//		System.out.println(hashList);
-//		recomService.searchHashTag(hashList);
-////		return hashList;
-//	}
 
 
 	
@@ -47,7 +35,4 @@ public class RecomController {
 	public List<campsite_info> searchHashTag(){
 		return recomService.searchHashTag();
 	}
-//	
-	
-	
 }
