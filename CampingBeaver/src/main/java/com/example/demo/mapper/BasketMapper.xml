@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.demo.mapper.BasketMapper">
-	<!-- 장바구니 추가 -->
 	<insert id="cartAdd"> 
 		insert into basket_info values(null, #{user_id}, #{pkg_seq}, now())
 	</insert>
 	
-	<!-- 장바구니 삭제 -->
 	<delete id="cartDelete">
 		delete from basket_info where basket_seq=#{basket_seq}
 	</delete>
 
-	<!-- 장바구니 출력 -->
 	<select id="selectBasketList"
 		resultType="com.example.demo.model.basketlist">
 		select *

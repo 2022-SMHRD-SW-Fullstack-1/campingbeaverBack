@@ -24,7 +24,6 @@ public class ReservationinfoController {
 	@PostMapping("/reserv")
 	public void reserv(@RequestBody Map<String, Object> map) {
 		String jsonStr=gson.toJson(map);
-		System.out.println(jsonStr);
 		reservationinfoService.reserv(map);
 	}
 	
