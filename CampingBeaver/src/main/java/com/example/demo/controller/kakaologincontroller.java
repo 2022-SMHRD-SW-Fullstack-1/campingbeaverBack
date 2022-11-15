@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.kakao.KakaoUserInfo;
+//import com.example.demo.kakao.KakaoUserInfo;
 import com.example.demo.model.user_info;
 import com.example.demo.service.PackageinfoService;
 import com.example.demo.service.UserinfoService;
@@ -51,15 +51,15 @@ public class kakaologincontroller {
 		
 	}
 	
-	@GetMapping("/test")
-	public void test() {
-		try {
-			KakaoUserInfo.kakaouserinfo();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
+//	@GetMapping("/test")
+//	public void test() {
+//		try {
+//			KakaoUserInfo.kakaouserinfo();
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//	}
 	
 	@Autowired
 	UserinfoService userinfoService;
@@ -104,5 +104,15 @@ public class kakaologincontroller {
 		System.out.println(userinfo);
 		
 		return userinfoService.update(userinfo);
+	}
+	
+	@PostMapping("/userdelete")
+	public user_info userdelete(@RequestBody String reserv) {
+		
+		Gson gson = new Gson();
+		user_info user_id = gson.fromJson(reserv, user_info.class);
+		System.out.println(user_id);
+		System.out.println(user_id);
+		return userinfoService.userdelete(user_id);
 	}
 }

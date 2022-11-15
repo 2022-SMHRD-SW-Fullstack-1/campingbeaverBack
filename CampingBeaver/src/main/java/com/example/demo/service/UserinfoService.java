@@ -23,4 +23,8 @@ public class UserinfoService {
 	public int update(user_info userinfo) {
 		return userinfoMapper.update(userinfo);
 	}
+	
+	public user_info userdelete(user_info user_id) {
+		return userinfoMapper.userdelete(user_id);
+	}
 }

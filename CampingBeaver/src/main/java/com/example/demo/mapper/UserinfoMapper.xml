@@ -14,4 +14,9 @@
     	UPDATE user_info SET user_pw = #{user_pw}, user_phone = #{user_phone}, user_addr = #{user_addr}, user_email = #{user_email}
     	where user_id = #{user_id}
     </update>
+    
+    <delete id="userdelete" parameterType="com.example.demo.model.user_info">
+    	DELETE FROM user_info
+    	where user_id = #{user_id}
+    </delete>
 </mapper>
