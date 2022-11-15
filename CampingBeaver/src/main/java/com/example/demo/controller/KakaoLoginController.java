@@ -34,13 +34,7 @@ public class KakaoLoginController {
 	
 
 	
-	//react에서 access_token 받아왔음
-	@PostMapping("/kakaologin")
-	public void reservation(@RequestBody String reserv) {
-		System.out.println("boot enter");
-		System.out.println(reserv);
-		
-	}
+
 	
 
 	
