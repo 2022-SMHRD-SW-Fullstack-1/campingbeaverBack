@@ -21,7 +21,6 @@ public class RecomService {
 	}
 	
 	public List<campsite_info> searchHashTag(){
-//		System.out.println(hashList.size());
 		return recomMapper.searchHashTag();
 	}
 }
