@@ -20,8 +20,8 @@
 * Front-End : React, HTML, CSS
 * Back-End : Spring Boot, node JS, Tomcat
 * Database : MySQL
-* IDE : Visual Studio Code, eclipse
-* Collaboration : slack, notion, github
+* IDE : Visual Studio Code, Eclipse
+* Collaboration : Slack, Notion, Github
                  
 
 ### 웹페이지 시연영상
