@@ -21,7 +21,7 @@
 * Back-End : Spring Boot, node JS, Tomcat
 * Database : MySQL
 * IDE : Visual Studio Code, eclipse
-* Collaboration : slack, notion,github
+* Collaboration : slack, notion, github
                  
 
 ### 웹페이지 시연영상
