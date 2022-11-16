@@ -27,5 +27,5 @@
 ### 웹페이지 시연영상
 
 
-### Colaboration Tool
+### Collaboration Tool
 * Git, Slack
